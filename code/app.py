@@ -13,7 +13,9 @@ def say_hi(name):
 def index():
    link1 = '<p><a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a></p>'
    redtree = '<p><a href="http://192.168.1.11/pattern/red">Make Tree Red</a></p>'
-   return '<html><body><h1>Hello World</h1>' + redtree + '</body></html>'
+   bluetree = '<p><a href="http://192.168.1.11/pattern/blue">Make Tree Blue</a></p>'
+   greentree = '<p><a href="http://192.168.1.11/pattern/green">Make Tree Green</a></p>'
+   return '<html><body><h1>Hello World</h1>' + redtree + bluetree + greentree + '</body></html>'
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=80, debug=True)
