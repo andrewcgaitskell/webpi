@@ -1,1 +1,1 @@
-import app.py
+from app import Temp
