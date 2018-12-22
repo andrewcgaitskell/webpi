@@ -11,4 +11,4 @@ led3 = btle.UUID("acf1399a-05de-4f19-932d-9b82e23c78bc")
  
 ledService = dev.getServiceByUUID(led3)
 for ch in ledService.getCharacteristics():
-  print str(ch)
+  print(str(ch))
