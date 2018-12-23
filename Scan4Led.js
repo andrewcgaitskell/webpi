@@ -22,7 +22,7 @@ Modified from Maria Paula Saba's exploreExample.
 var noble = require('noble');   //noble library
 var peripheralName = "LED";     // the local name of the peripheral you want
 var targetService = 'acf1399a05de4f19932d9b82e23c78bc';         // the service you want
-var targetCharacteristic = 'b3097f19d2c44a03951ea95ccd203a3b;  // the characteristic you want
+var targetCharacteristic = 'b3097f19d2c44a03951ea95ccd203a3b';  // the characteristic you want
 
 // The scanning function
 function scan(state){
