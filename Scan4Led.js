@@ -51,12 +51,11 @@ function findMe (peripheral) {
     // start discovering services:
     // you could also use peripheral.discoverSomeServicesAndCharacteristics here,
     // and filter by the target service and characteristic:
-    var serviceUUIDs = ["acf1399a05de4f19932d9b82e23c78bc"];
-    var characteristicUUIDs = ["1561ec697ead48f69b0b6a66c4c2493e"];
+    var serviceUUIDs = ['acf1399a05de4f19932d9b82e23c78bc'];
+    var characteristicUUIDs = ['1561ec697ead48f69b0b6a66c4c2493e'];
     //peripheral.discoverSomeServicesAndCharacteristics(serviceUUIDs, characteristicUUIDs, [callback(error, services, characteristics));
     //peripheral.discoverAllServicesAndCharacteristics(exploreMe);
     peripheral.discoverSomeServicesAndCharacteristics(serviceUUIDs, characteristicUUIDs,exploreMe)
-
   // when a peripheral disconnects, run disconnectMe:
   peripheral.on('disconnect', disconnectMe);
 }
