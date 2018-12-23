@@ -55,7 +55,7 @@ function findMe (peripheral) {
     var characteristicUUIDs = ['1561ec697ead48f69b0b6a66c4c2493e'];
     //peripheral.discoverSomeServicesAndCharacteristics(serviceUUIDs, characteristicUUIDs, [callback(error, services, characteristics));
     //peripheral.discoverAllServicesAndCharacteristics(exploreMe);
-    peripheral.discoverSomeServicesAndCharacteristics(serviceUUIDs, characteristicUUIDs,exploreMe)
+    peripheral.discoverSomeServicesAndCharacteristics(serviceUUIDs, characteristicUUIDs,exploreMe);
   // when a peripheral disconnects, run disconnectMe:
   peripheral.on('disconnect', disconnectMe);
 }
