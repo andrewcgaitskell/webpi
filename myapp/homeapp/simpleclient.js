@@ -28,7 +28,7 @@ client.connect()
 //  client.end()
 //})
 
-client.query('"LISTEN watchers"', (err, res) => {
+client.query('LISTEN watchers', (err, res) => {
   console.log(err, res)
   client.end()
 })
