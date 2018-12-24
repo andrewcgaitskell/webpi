@@ -1,10 +1,10 @@
 const { Pool, Client } = require('pg')
 
 const pool = new Pool({
-  user: 'dbuser',
-  host: 'database.server.com',
-  database: 'mydb',
-  password: 'secretpassword',
+  user: 'pi',
+  host: 'localhost',
+  database: 'data',
+  password: 'raspberry',
   port: 3211,
 })
 
@@ -15,7 +15,7 @@ pool.query('SELECT NOW()', (err, res) => {
 
 const client = new Client({
   user: 'pi',
-  host: 'localhost,
+  host: 'localhost',
   database: 'data',
   password: 'raspberry',
   port: 3211,
