@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-var pg = require('pg')
+const pg = require('pg')
 var format = require('pg-format')
 var PGHOST='localhost'
 var PGUSER = 'pi'
