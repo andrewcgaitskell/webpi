@@ -21,7 +21,7 @@ var config = {
 
 //var pgConString = "postgres://localhost/bjorngylling"
 
-const connectionString = 'postgresql://pi:raspberry@localhost:3000/data'
+const pgConString = 'postgresql://pi:raspberry@localhost:3000/data'
 
 
 pg.connect(pgConString, function(err, client) {
