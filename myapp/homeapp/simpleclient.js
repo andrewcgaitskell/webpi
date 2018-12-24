@@ -29,6 +29,5 @@ client.connect()
 //})
 
 client.query('LISTEN watchers', (err, res) => {
-  console.log(err, res)
-  client.end()
-})
+  client.on "notification", (msg) ->
+      console.log msg})
