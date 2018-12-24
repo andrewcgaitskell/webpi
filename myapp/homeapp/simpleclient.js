@@ -20,9 +20,15 @@ const client = new Client({
   password: 'raspberry',
   port: 5432,
 })
+
 client.connect()
 
-client.query('SELECT NOW()', (err, res) => {
+//client.query('SELECT NOW()', (err, res) => {
+//  console.log(err, res)
+//  client.end()
+//})
+
+client.query('"LISTEN watchers"', (err, res) => {
   console.log(err, res)
   client.end()
 })
