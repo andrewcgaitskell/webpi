@@ -36,13 +36,11 @@ const pool = new Pool({
 
 var sql = 'SELECT id, description, device, service, characteristic, value, timestamp FROM lights.state'
 
-gettablepage : pool.query(sql, function(err, rows, fields) {
-  if (err) throw err;
-  res.render('valuestable', { title: 'Users', rows: rows }); 
-  console.log(err, res);
-  pool.end()
-});
-
-app.get('/table', gettablepage);
+pool.query(sql, function (err, result) {
+    if (err) {
+      console.log(err)
+    }
+    console.log(result.rows[0])
+  })
                           
 
