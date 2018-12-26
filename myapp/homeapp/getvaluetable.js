@@ -38,7 +38,7 @@ var sql = 'SELECT id, description, device, service, characteristic, value, times
 
 pool.query(sql, (err, function(err, rows, fields) {
   if (err) throw err;
-  res.render('users', { title: 'Users', rows: rows });
+  res.render('valuestable', { title: 'Users', rows: rows });
 });) => {
   console.log(err, res)
   pool.end()
