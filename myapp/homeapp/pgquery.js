@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+
 var pg = require('pg')
 var format = require('pg-format')
 var PGHOST='localhost'
@@ -8,6 +9,8 @@ var PGDATABASE = 'data'
 var PGPASSWORD = 'raspberry'
 var listenport = 3000
 var age = 732
+
+require('dotenv').config()
 
 var config = {
   user: PGUSER, // name of the user account
