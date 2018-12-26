@@ -38,30 +38,16 @@ var PGPASSWORD = 'raspberry'
 var listenport = 3000
 //var age = 732
 
-var config = {
-  user: PGUSER, // name of the user account
-  host: PGHOST,
-  database: PGDATABASE, // name of the database
-  password: PGPASSWORD,
-  //port: listenport,
-  max: 10, // max number of clients in the pool
-  idleTimeoutMillis: 30000 // how long a client is allowed to remain idle before being closed
-}
+//var config = {
+//  user: PGUSER, // name of the user account
+//  host: PGHOST,
+//  database: PGDATABASE, // name of the database
+//  password: PGPASSWORD,
+//  //port: listenport,
+//  max: 10, // max number of clients in the pool
+//  idleTimeoutMillis: 30000 // how long a client is allowed to remain idle before being closed
+//}
 
-//var pgConString = "postgres://localhost/bjorngylling"
-
-//const pgConString = 'postgresql://pi:raspberry@localhost:3000/data'
-const { Pool, Client } = require('pg')
-
-const pool = new Pool({
-  user: PGUSER, // name of the user account
-  host: PGHOST,
-  database: PGDATABASE, // name of the database
-  password: PGPASSWORD,
-  //port: listenport,
-  max: 10, // max number of clients in the pool
-  idleTimeoutMillis: 30000 // how long a client is allowed to remain idle before being closed
-})
 
 app.get('/table', function (req, res) {
   const { Pool, Client } = require('pg')
