@@ -1,5 +1,5 @@
-const express = require('express')
-const app = express()
+//const express = require('express')
+//const app = express()
 const pg = require('pg')
 var format = require('pg-format')
 var PGHOST='localhost'
@@ -7,7 +7,7 @@ var PGUSER = 'pi'
 var PGDATABASE = 'data'
 var PGPASSWORD = 'raspberry'
 var listenport = 3000
-var age = 732
+//var age = 732
 
 var config = {
   user: PGUSER, // name of the user account
@@ -36,26 +36,8 @@ const pool = new Pool({
 
 pool.query('SELECT NOW()', (err, res) => {
   console.log(err, res)
+  res.render('ValuesTable', { title: 'Values Tables', rows: rows });
   pool.end()
 })
 
-const client = new Client({
-  user: PGUSER, // name of the user account
-  host: PGHOST,
-  database: PGDATABASE, // name of the database
-  password: PGPASSWORD,
-  //port: listenport,
-  max: 10, // max number of clients in the pool
-  idleTimeoutMillis: 30000 // how long a client is allowed to remain idle before being closed
-})
 
-
-client.connect(function(err, client) {
-  if(err) {
-    console.log(err);
-  }
-  client.on('notification', function(msg) {
-    console.log(msg);
-  });
-  var query = client.query("LISTEN watchers");
-});
