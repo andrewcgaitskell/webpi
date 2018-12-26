@@ -40,8 +40,8 @@ gettablepage : pool.query(sql, (err, function(err, rows, fields) {
   if (err) throw err;
   res.render('valuestable', { title: 'Users', rows: rows }); 
   console.log(err, res);
-  pool.end())
-});
+  pool.end()
+}));
 
 app.get('/table', gettablepage);
                           
