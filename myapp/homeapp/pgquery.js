@@ -14,7 +14,7 @@ require('dotenv').config()
 
 var config = {
   //user: PGUSER, // name of the user account
-  PGUSER: process.env.DB_USER,  
+  user: process.env.DB_USER,  
   //host: PGHOST,
   host: process.env.DB_HOST,
   database: PGDATABASE, // name of the database
