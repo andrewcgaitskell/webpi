@@ -1,4 +1,5 @@
 const express = require('express')
+var router = express.Router()
 const app = express()
 const pg = require('pg')
 var format = require('pg-format')
@@ -43,4 +44,6 @@ pool.query(sql, function (err, result) {
     console.log(result.rows[0])
   })
                           
-
+router.get('/table', function (req, res) {
+  res.send('Birds home page')
+})
