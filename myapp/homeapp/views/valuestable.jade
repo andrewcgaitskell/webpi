@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1= title
+  p #{title} Listing
+
+  table
+    thead
+      tr
+        th id
+        th description
+        th device
+        th service      
+        th characteristic
+        th value
+        th timestampofchange
+        
+     tbody
+      - each item in rows
+        tr
+          td= item.firstName
+          td= item.lastName
+
+SELECT id, description, device, service, characteristic, value, "timestamp"
+	FROM lights.state;
