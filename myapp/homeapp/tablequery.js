@@ -34,6 +34,7 @@ pool.connect(function (err, client, done) {
     console.log('listening on 3000')
   })
   myClient = client
+  var id = 1
   var idQuery = format('SELECT id, description, device, service, characteristic, value, "timestamp" FROM lights.state WHERE id = %L', id)
   myClient.query(idQuery, function (err, result) {
     if (err) {
