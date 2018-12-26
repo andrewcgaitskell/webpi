@@ -18,8 +18,12 @@ block content
      tbody
       - each item in rows
         tr
-          td= item.firstName
-          td= item.lastName
+	  td= item.id
+          td= item.description
+          td= item.device
+          td= item.service      
+          td= item.characteristic
+          td= item.value
+          td= item."timestamp"
 
-SELECT id, description, device, service, characteristic, value, "timestamp"
-	FROM lights.state;
+
