@@ -1,5 +1,5 @@
-//const express = require('express')
-//const app = express()
+const express = require('express')
+const app = express()
 const pg = require('pg')
 var format = require('pg-format')
 var PGHOST='localhost'
@@ -34,7 +34,7 @@ const pool = new Pool({
   idleTimeoutMillis: 30000 // how long a client is allowed to remain idle before being closed
 })
 
-pool.query('SELECT NOW()', (err, res) => {
+pool.query('SELECT id, description, device, service, characteristic, value, timestamp FROM lights.state', (err, res) => {
   console.log(err, res)
   res.render('ValuesTable', { title: 'Values Tables', rows: rows });
   pool.end()
