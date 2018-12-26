@@ -10,6 +10,8 @@ var PGPASSWORD = 'raspberry'
 var listenport = 3000
 //var age = 732
 
+app.listen(3000)
+
 var config = {
   user: PGUSER, // name of the user account
   host: PGHOST,
