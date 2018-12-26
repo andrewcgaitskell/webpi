@@ -34,10 +34,14 @@ const pool = new Pool({
   idleTimeoutMillis: 30000 // how long a client is allowed to remain idle before being closed
 })
 
-pool.query('SELECT id, description, device, service, characteristic, value, timestamp FROM lights.state', (err, res) => {
+var sql = 'SELECT id, description, device, service, characteristic, value, timestamp FROM lights.state'
+
+pool.query(sql, (err, res) => {
   console.log(err, res)
-  res.render('ValuesTable', { title: 'Values Tables', rows: rows });
   pool.end()
 })
 
-
+//function(err, rows, fields) {
+//  if (err) throw err;
+//  res.render('users', { title: 'Users', rows: rows });
+//});
